@@ -1,0 +1,52 @@
+.titulo_hoteis{
+     color: blue;
+     border: 1px solid;
+     background-color: lightblue;
+     text-align: center;
+}
+
+.fundo{
+    background-color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.subtitulo_hotel{
+    color: black;
+    text-align: center;
+    font-size: 23px;
+}
+
+.titulo_caixinha_hotel{
+    color: black;
+}
+
+.form_container{
+     background-color: lightblue;
+     width: 400px;
+     margin: 30px auto;
+     padding: 20px 30px 30px 30px;
+     border-radius: 8px;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.caixa_respostas{
+     border-radius: 10px;
+     box-sizing: border-box;
+     padding: 8px;
+     width: 100%;
+}
+
+.button_enviar_cadastro_hotel{
+    padding: 10px 20px; 
+    background-color: transparent; 
+    color: black; 
+    border: 2px solid green; 
+    padding: 10px 20px; 
+    border-radius: 6px;
+    cursor: pointer; 
+    width: 100%;
+}
+
+.button_enviar_cadastro_hotel:hover{
+    background-color: green;
+}

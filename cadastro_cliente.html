@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Repouso Real</title>
+    <title>Cadastrar Hotel</title>
 
     <link rel="stylesheet" href="css/estilo.css">
     <link rel="shortcut icon" href="img/images.jpg" type="image/x-icon">
@@ -17,22 +17,22 @@
     <form action="salvar_cliente.php" method="post">
         <div>
         <label for="nome"> Nome completo:</label>
-        <input type="text" name="nome" id="nome" class="caixinha_resposta">
+        <input type="text" name="nome" id="nome" class="caixinha_resposta" required>
 
         <br><br>
 
         <label for="email">E-mail:</label>
-        <input type="email" name="email" id="email" placeholder="ex: repousoreal@gmail.com" class="caixinha_resposta">
+        <input type="email" name="email" id="email" placeholder="ex: repousoreal@gmail.com" class="caixinha_resposta" required>
 
         <br><br>
 
         <label for="telefone">Telefone:</label>
-        <input type="number" name="telefone" id="telefone" min="0" class="caixinha_resposta">
+        <input type="number" name="telefone" id="telefone" min="0" class="caixinha_resposta" required>
 
         <br><br>
 
         <label for="senha">Crie uma senha:</label>
-        <input type="password" name="senha" id="senha" class="caixinha_resposta">
+        <input type="password" name="senha" id="senha" class="caixinha_resposta" required>
 
         <br><br>
 
