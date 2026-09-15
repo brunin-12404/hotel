@@ -14,21 +14,29 @@
 
     <div class="form_container">
 
-    <h2 class="titulo_caixinha_hotel">Cadastro de hotel</h2>   <a href="http://localhost/hotel/index.html"> <img src="img/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" style="background-color: black; margin: 0% 0% 0% 95%;" alt=""></a>
+      <div style="display: flex;">      
+        <div style="width: 70%;">
+          <h2 class="">Cadastro de hotel</h2>   
+        </div>
+        <div style="padding-top: 5%; padding-left: 30%;">
+          <a href="http://localhost/hotel/index.html"> <img src="img/home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" style="background-color: black; " alt=""></a>
+        </div>
+      </div>
+    
     <form action="salvar_hotel.php" method="post">
         <div>
-        <label for="">Nome do Hotel:</label>
-        <input type="text" name="" id="" placeholder="digite o nome do hotel" required class="caixa_respostas">
+        <label for="hotel">Nome do Hotel:</label>
+        <input type="text" name="hotel" id="hotel" placeholder="digite o nome do hotel" required class="caixa_respostas">
 
         <br><br>
 
-        <label for="">Cidade:</label>
-        <input type="text" name="" id="" placeholder="ex: São Paulo" required class="caixa_respostas">
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" id="cidade" placeholder="ex: São Paulo" required class="caixa_respostas">
 
         <br><br>
 
-        <label for="">Classificação em Estrelas:</label>
-        <input type="number" name="" id="" min="1" max="5" required class="caixa_respostas">
+        <label for="estrelas">Classificação em Estrelas:</label>
+        <input type="number" name="estrelas" id="estrelas" min="1" max="5" required class="caixa_respostas">
 
         <br><br>
 
