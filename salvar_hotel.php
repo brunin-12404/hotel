@@ -1,7 +1,7 @@
 <?php
 require_once "conexao.php";
 
-$hotel = $_POST['hotel'];
+$hotel = $_POST['nome_hotel'];
 $cidade = $_POST['cidade'];
 $estrelas = $_POST['estrelas'];
 
