@@ -4,9 +4,11 @@ require_once "conexao.php";
 $hotel = $_POST['nome_hotel'];
 $cidade = $_POST['cidade'];
 $estrelas = $_POST['estrelas'];
+$email = $_POST['email'];
+$senha = $_POST['senha'];
 
-$sql = "INSERT INTO clientes (hotel, cidade, estrelas)
-VALUES ('$hotel', '$cidade', $estrelas)";
+$sql = "INSERT INTO hoteis (nome, cidade, estrelas, email, senha)
+VALUES ('$hotel', '$cidade', $estrelas, '$email', '$senha')";
 
 if(mysqli_query($conexao, $sql)){
 }
