@@ -42,6 +42,8 @@
             box-sizing: border-box;
             padding: 8px;
             width: 100%;
+            cursor: pointer;
+            border: 1px black;
         }
 
         .button_voltar{
