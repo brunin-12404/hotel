@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastro de quartos</title>
+    <link rel="stylesheet" href="css/estilo_cadastro_hotel.css">
+    <link rel="shortcut icon" href="img/imagem-hotel-logomarca.avif" type="image/x-icon">
+
+</head>
+<body style="background-color: gray;">
+    <h1 style="text-align: center; color: black; border: 1px solid; background-color: blue;">Escolha seu quarto <img src="img/quartos-hoteis-lindos1.webp" width="50" alt=""></h1>
+
+    <div class="form_container">
+        <form action="salvar_quarto.php" method="post">
+            <div>
+                <label for="">ID do Hotel:</label>
+                <input type="number" name="" id="" class="caixa_respostas">
+
+                <br><br>
+
+                <label for="numero_quarto">Número do quarto:</label>
+                <input type="text" name="numero_quarto" id="numero_quarto" class="caixa_respostas" placeholder="101, 202, 205">
+
+                <br><br>
+
+                <label for="tipo_quarto">Tipo do quarto:</label>
+                <select name="tipo_quarto" id="tipo_quarto" class="caixa_respostas">
+                    <option value="tipo_quarto">Solteiro</option>
+                    <option value="tipo_quarto">Casal</option>
+                    <option value="">Suíte (Luxo)</option>
+                </select>
+
+                <br><br>
+
+                <label for="preco">Preço da diária:</label>
+                <input type="number" name="preco" id="preco" class="caixa_respostas" step="0.01" min="-0">
+
+                <br><br>
+
+                <button class="button_enviar_cadastro_hotel"><b>SALVAR</b></button>
+
+                <br><br>
+            </div>
+        </form>
+        <a href="logout_hotel.php">Sair/Deslogar</a>
+    </div>
+</body>
+</html>
