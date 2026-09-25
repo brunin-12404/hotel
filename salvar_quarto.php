@@ -7,7 +7,7 @@ $tipo_quarto = $_POST['tipo_quarto'];
 $preco = $_POST['preco'];
 
 $sql = "INSERT INTO quartos (hotel_id, numero, tipo, preco_diaria, disponivel)
-VALUES ($hotel_id, $numero_quarto, '$tipo_quarto', '$preco', 1)";
+VALUES ($hotel_id, $numero_quarto, '$tipo_quarto', $preco, 1)";
 
 if(mysqli_query($conexao, $sql)){
     echo '<h2 style="color: black; text-align: center;"> QUARTO CRIADO COM SUCESSO! <h2/> <br><br>';

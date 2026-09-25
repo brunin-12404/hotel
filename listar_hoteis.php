@@ -16,11 +16,15 @@ $resultado = mysqli_query($conexao, $sql);
     <style>
         .table_hoteis{
             color: blue;
-            font-size: 45px;
+            font-size: 30px;
+            margin: 10% 20%; 
+            background-color: white;
         }
     </style>
 </head>
-<body>
+<body style="background-color: gray;">
+    <h1 style="text-align: center; color: brown;">Lista de Hoteis</h1>
+
     <table border="1" class="table_hoteis">
         <tr>
             <th>Nome</th>

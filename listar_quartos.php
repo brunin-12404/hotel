@@ -17,10 +17,12 @@ $resultado = mysqli_query($conexao, $sql);
         .tables_quartos{
             color:black;
             font-size: 30px;
+            background-color: white;
+            margin: 0% 0% 0% 10%;
         }
     </style>
 </head>
-<body>
+<body style="background-color: gray;">
     <h2>Lista de Quartos Cadastrados</h2>
     <table border="1" class="tables_quartos">
         <thead>
