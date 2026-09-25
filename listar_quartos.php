@@ -26,10 +26,12 @@ $resultado = mysqli_query($conexao, $sql);
     <h2>Lista de Quartos Cadastrados</h2>
     <table border="1" class="tables_quartos">
         <thead>
-            <tr>ID</tr>
-            <tr>Número</tr>
-            <tr>Tipo</tr>
-            <tr>Preço</tr>
+            <tr>
+            <th>ID</th>
+            <th>Número</th>
+            <th>Tipo</th>
+            <th>Preço</th>
+            </tr>
         </thead>
 
         <?php

@@ -58,7 +58,7 @@ $resultado = mysqli_query($conexao, $sql);
     </style>
 </head>
 <body style="background-color: darkorange;">
-    <h1 style="text-align: center; border 1px solid; background-color: black; color: white;">Quartos disponíveis no Hotel Selecionado</h1>
+    <h1 style="text-align: center; border 1px solid; background-color: black; color: white;">Quartos Disponíveis no Hotel Selecionado</h1>
 
     <table border="1" class="ver_quartos">
         <tr>
@@ -83,19 +83,19 @@ $resultado = mysqli_query($conexao, $sql);
 
     <form action="salvar_reserva.php" method= "POST">
         <label for="id_cliente">ID do cliente:</label>
-        <input type="number" name="id_cliente" id="id_cliente" class="caixa_respostas">
+        <input type="number" name="id_cliente" id="id_cliente" class="caixa_respostas" require>
         <br><br>
 
         <label for="id_quarto">ID quarto:</label>
-        <input type="number" name="id_quarto" id="id_quarto" class="caixa_respostas">
+        <input type="number" name="id_quarto" id="id_quarto" class="caixa_respostas" require>
         <br><br>
 
         <label for="">Data de Entrada (Check-in):</label>
-        <input type="date" name="data_entrada" id="data_entrada" class="caixa_respostas">
+        <input type="date" name="data_entrada" id="data_entrada" class="caixa_respostas" require>
         <br><br>
 
         <label for="">Data de Saída (Check-out):</label>
-        <input type="date" name="data_saida" id="data_saida" class="caixa_respostas">
+        <input type="date" name="data_saida" id="data_saida" class="caixa_respostas" require>
         <br><br>
 
         <button class="button_ver_quartos"> <b>CONFIRMAR RESERVA</b></button>
