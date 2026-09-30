@@ -1,7 +1,11 @@
 <?php
 require_once 'conexao.php';
 
-$sql = "SELECT reservas.id, quartos.numero_quarto, quartos.tipo, quartos.preco, reservas.data_entrada, reservas.data_saida FROM reservas JOIN quartos ON reservas.id_quarto = quartos.id WHERE reservas.id_cliente = '$id_cliente'";
+$sql = "SELECT reservas.id, hoteis.nome AS nome_hotel, quartos.tipo,reservas.data_entrada,reservas.data_saida,quartos.preco_diaria
+FROM reservas
+JOIN quartos ON reservas.quarto_id = quartos.id
+JOIN hoteis ON quartos.hotel_id = hoteis.id";
+
 $resultado = mysqli_query($conexao, $sql);
 
 ?>
@@ -16,44 +20,58 @@ $resultado = mysqli_query($conexao, $sql);
     <style>
         .table_reserva{
             color: green;
+            font-size: 20px;
+        }
+
+        .button{
+    padding: 10px 20px; 
+    background-color: transparent; 
+    color: black; 
+    border: 2px solid green; 
+    padding: 10px 20px; 
+    border-radius: 6px;
+    cursor: pointer; 
+    
+        }
+
+        .button:hover{
+            background-color: green;
         }
     </style>
 </head>
 <body style="background-color: beige;">
 
-    <h2 style="color: black;">Reserva do Quarto</h2>
+    <h2 style="color: black;">MINHAS RESERVAS CONFIRMADAS</h2>
     <table border="1" class="table_reserva">
         <thead>
-            <tr>
-        <th>ID Cliente</th>
-        <th>ID Quarto</th>
-        <th>Data de Entrada</th>
-        <th>Data de Saída</th>
-        <th>Total</th>
+            <tr style="background-color: lightblue;">
+        <th>Cod.Reserva</th>
+        <th>Quarto</th>
+        <th>Tipo do quarto</th>
+        <th>Diária</th>
+        <th>Data Entrada (Check-in)</th>
+        <th>Data Saída (Check-out)</th>
         </tr>
         </thead>
 
         <?php
-        if (mysqli_num_rows($resultado) > 0){
-            while ($reserva = mysqli_fetch_assoc($resultado)){
-                echo "<tr>";
+            while ($linha = mysqli_fetch_assoc($resultado)){
+                echo "<tr>
 
-                echo "<td>". $reserva['cliente_id']. "</td>";
-                echo "<td>". $reserva['quarto_id']. "</td>";
-                echo "<td>". $reserva['data_entrada']. "</td>";
-                echo "<td>". $reserva['data_saida']. "</td>";
+                  <td>".$linha['id']. "</td>
+                  <td>".$linha['nome_hotel']."</td>
+                 <td>".$linha['tipo']. "</td>
+                  <td>".$linha['preco_diaria']."</td>
+                  <td>".$linha['data_saida']."</td>
                 
-                echo "<?td>";
+                 </tr>";
             }
-        }
-        else{
-            echo "<tr><td><h2> Nenhuma Reserva Encontrada. </h2></tr></td>";
-        }
+        
                 ?>
                 
     </table>
     <p>
-        <a href="listar_hoteis.php">Voltar a Lista de Hoteis.</a>
+        <a href="listar_hoteis.php"><button class="button">Clique aqui para novas reservas.</button></a>
     </p>
 </body>
 </html>

@@ -26,7 +26,7 @@ $resultado = mysqli_query($conexao, $sql);
     <h2>Lista de Quartos Cadastrados</h2>
     <table border="1" class="tables_quartos">
         <thead>
-            <tr>
+            <tr style="background-color: lightblue;">
             <th>ID</th>
             <th>Número</th>
             <th>Tipo</th>
