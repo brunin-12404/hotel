@@ -4,13 +4,21 @@ require_once "conexao.php";
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 
-$sql = "SELECT * FROM clientes WHERE email = '$email' and senha = '$senha'";
+
+$sql = "SELECT * FROM clientes WHERE email = '$email'";
 
 $resultado = mysqli_query($conexao, $sql);
 echo mysqli_num_rows($resultado);
 if(mysqli_num_rows($resultado) > 0){
+
+    while($linha = mysqli_fetch_assoc($resultado)){
+    if(password_verify($senha, $linha ['senha'])){
+
     header("Location: minhas_reservas.php");
     exit();
+        }
+    }
+
 }else{
     header("Location: login.html");
     exit();
