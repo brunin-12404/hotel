@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'conexao.php';
 
 $sql = "SELECT reservas.id, hoteis.nome AS nome_hotel, quartos.tipo,reservas.data_entrada,reservas.data_saida,quartos.preco_diaria
@@ -8,6 +9,10 @@ JOIN hoteis ON quartos.hotel_id = hoteis.id";
 
 $resultado = mysqli_query($conexao, $sql);
 
+if( !isset($_SESSION['logado']) || $_SESSION['logado'] !== true ){
+    header("location: login.html");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
